@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/build_zone_graph"
+    app:startDestination="@id/buildZoneLoadFragment">
+
+    <fragment
+        android:id="@+id/buildZoneLoadFragment"
+        android:name="com.buildzone.zonebu.grv.presentation.ui.load.BuildZoneLoadFragment"
+        android:label="BuildZoneLoadFragment" >
+        <action
+            android:id="@+id/action_buildZoneLoadFragment_to_buildZoneV"
+            app:destination="@id/buildZoneV"
+            app:popUpTo="@id/build_zone_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/buildZoneV"
+        android:name="com.buildzone.zonebu.grv.presentation.ui.view.BuildZoneV"
+        android:label="BuildZoneV" />
+</navigation>

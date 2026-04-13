@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/buildZoneBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/build_zone_land_back" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/buildZoneLoadingGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="buildZoneProgress, buildZoneProgressText" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/buildZoneStateGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:constraint_referenced_ids="buildZoneConnectionState" />
+
+    <ImageView
+        android:id="@+id/buildZoneProgressText"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/buildZoneProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/build_zone_loadi" />
+
+    <ProgressBar
+        android:id="@+id/buildZoneProgress"
+        android:layout_width="153dp"
+        android:layout_height="161dp"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65999997" />
+
+
+    <ImageView
+        android:id="@+id/buildZoneConnectionState"
+        android:layout_width="0dp"
+        android:layout_height="241dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68"
+        app:srcCompat="@drawable/build_zone_state" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/buildZoneNotiGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="buildZoneNotifText,buildZoneGrandButton,buildZoneSkipButton,buildZoneNotifText2,buildZoneNotiBack" />
+
+    <ImageView
+        android:id="@+id/buildZoneNotiBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/buildZoneBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/build_zone_land" />
+
+
+    <TextView
+        android:id="@+id/buildZoneNotifText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/bagel_fat_one"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Allow notifications about bonuses and promos"
+        android:textColor="@color/white"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toTopOf="@+id/buildZoneNotifText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lineHeight="35dp" />
+
+    <Button
+        android:id="@+id/buildZoneGrandButton"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/build_zone_btn"
+        android:fontFamily="@font/bagel_fat_one"
+        android:text="Yes, I Want Bonuses!"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/buildZoneSkipButton"
+        app:layout_constraintEnd_toEndOf="@+id/buildZoneNotifText"
+        app:layout_constraintStart_toStartOf="@+id/buildZoneNotifText" />
+
+    <TextView
+        android:id="@+id/buildZoneSkipButton"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/bagel_fat_one"
+        android:gravity="center"
+        android:shadowColor="@color/white"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Skip"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buildZoneGrandButton"
+        app:layout_constraintStart_toStartOf="@+id/buildZoneGrandButton" />
+
+
+    <TextView
+        android:id="@+id/buildZoneNotifText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/bagel_fat_one"
+        android:gravity="center"
+        android:letterSpacing="0"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Stay tuned with best offers from our casino"
+        android:textColor="#BEFFFFFF"
+
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/buildZoneGrandButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lineHeight="35dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
